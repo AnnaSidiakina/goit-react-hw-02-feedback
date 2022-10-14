@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Container, Button } from './FeedbackOptions.styled';
 
 class FeedbackOptions extends Component {
   static defaultProps = {
@@ -13,18 +14,18 @@ class FeedbackOptions extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         {this.props.options.map(button => (
-          <button
+          <Button
             key={button}
             value={button}
             type="button"
             onClick={event => this.props.onLeaveFeedback(event)}
           >
             {button}
-          </button>
+          </Button>
         ))}
-      </div>
+      </Container>
     );
   }
 }
