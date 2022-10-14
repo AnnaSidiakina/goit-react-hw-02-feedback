@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Title = styled.h2`
-  font-size: ${p => p.theme.fontSizes.l};
-`;
-
 export const Container = styled.ul`
   list-style: none;
   display: grid;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Title, Container, Item, Value, Name } from './Statistics.styled';
+import { Container, Item, Value, Name } from './Statistics.styled';
 
 class Statistics extends Component {
   static defaultProps = {
@@ -20,7 +20,6 @@ class Statistics extends Component {
   render() {
     return (
       <div>
-        <Title>Statistics</Title>
         <Container>
           <Item>
             <Name>Good</Name>

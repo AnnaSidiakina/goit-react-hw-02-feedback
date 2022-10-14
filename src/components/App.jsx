@@ -42,23 +42,27 @@ class App extends Component {
   render() {
     const buttonNames = Object.keys(this.state);
     return (
-      <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={buttonNames}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
-        {this.onShow() ? (
-          <Notification message="There is no feedback" />
-        ) : (
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.onTotalCount()}
-            positiveFeedback={this.onPositiveFeedback()}
+      <>
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={buttonNames}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
-        )}
-      </Section>
+        </Section>
+        <Section title="Statistics">
+          {this.onShow() ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.onTotalCount()}
+              positiveFeedback={this.onPositiveFeedback()}
+            />
+          )}
+        </Section>
+      </>
     );
   }
 }
