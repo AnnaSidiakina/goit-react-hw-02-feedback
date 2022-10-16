@@ -7,7 +7,7 @@ class Notification extends Component {
     message: ' ',
   };
   static propTypes = {
-    message: PropTypes.string,
+    message: PropTypes.string.isRequired,
   };
   render() {
     return <Title>{this.props.message}</Title>;
